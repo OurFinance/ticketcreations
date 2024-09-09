@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <link rel="stylesheet" href="TicketPage.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-layout">
+                <!-- Left Column (Customer Info and Hero Agent) -->
+                <div class="left-column">
+                    <!-- Customer Info -->
+                    <div class="panel-section" id="customer-info">
+                        <h3>Customer Info</h3>
+                        <div class="panel-content">
+                            <div class="form-group">
+                                <label for="customerName">Customer Name:</label>
+                                <input type="text" id="customerName" name="customerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerNo">Customer No.:</label>
+                                <input type="text" id="customerNo" name="customerNo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerEmail">Customer Email:</label>
+                                <input type="email" id="customerEmail" name="customerEmail" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero Agent -->
+                    <div class="panel-section" id="hero-agent">
+                        <h3>Hero Agent</h3>
+                        <div class="panel-content">
+                            <div class="form-group">
+                                <label for="heroName">Hero Name:</label>
+                                <input type="text" id="heroName" name="heroName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="staffID">Staff ID:</label>
+                                <input type="text" id="staffID" name="staffID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="source">Source:</label>
+                                <input type="text" id="source" name="source" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ttNo">TT No.:</label>
+                                <input type="text" id="ttNo" name="ttNo" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mid-Left Column (Field Team Detail) -->
+                <div class="midleft-column">
+                    <!-- Field Team Detail -->
+                    <div class="panel-section" id="field-team-detail">
+                        <h3>Field Team Detail</h3>
+                        <div class="panel-content">
+                            <div class="form-group">
+                                <label for="fieldName">Name:</label>
+                                <input type="text" id="fieldName" name="fieldName">
+                            </div>
+                            <div class="form-group">
+                                <label for="fieldNo">No.:</label>
+                                <input type="text" id="fieldNo" name="fieldNo">
+                            </div>
+                            <div class="form-group">
+                                <label for="fieldStaffID">Staff ID:</label>
+                                <input type="text" id="fieldStaffID" name="fieldStaffID">
+                            </div>
+                            <div class="form-group">
+                                <label for="tmf">TMF TT No.:</label>
+                                <input type="text" id="tmf" name="tmf">
+                            </div>
+                            <div class="form-group">
+                                <label for="etta">ETTA:</label>
+                                <input type="text" id="etta" name="etta">
+                            </div>
+                            <div class="form-group">
+                                <label for="ettr">ETTR:</label>
+                                <input type="datetime-local" id="ettr" name="ettr">
+                            </div>
+                            <div class="form-group">
+                                <label for="delayReason">Delay Reason:</label>
+                                <input type="text" id="delayReason" name="delayReason">
+                            </div>
+							<div class="form-group">
+                                <label for="null"> </label>
+                            </div>
+							<div class="form-group">
+                                <label for="null"> </label>
+                            </div>
+							<div class="form-group">
+                                <label for="null"> </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Combined CR Details Panel -->
+                <div class="middle-column">
+                    <!-- CR Details -->
+                    <div class="panel-section" id="cr-details">
+                        <h3>CR Details</h3>
+                        <div class="panel-content cr-details-content">
+                            <!-- Left side of CR Details -->
+                            <div class="cr-left">
+                                <div class="form-group">
+                                    <label for="crID">CR ID:</label>
+                                    <input type="text" id="crID" name="crID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="crStatus">CR Status:</label>
+                                    <input type="text" id="crStatus" name="crStatus">
+                                </div>
+                                <div class="form-group">
+                                    <label for="crCreatedTimeDate">CR Created Time & Date:</label>
+                                    <input type="datetime-local" id="crCreatedTimeDate" name="crCreatedTimeDate">
+                                </div>
+                                <div class="form-group">
+                                    <label for="crCreatedBy">CR Created By:</label>
+                                    <input type="text" id="crCreatedBy" name="crCreatedBy">
+                                </div>
+                                <div class="form-group">
+                                    <label for="crAging">CR Aging:</label>
+                                    <input type="text" id="crAging" name="crAging">
+                                </div>
+								<div class="form-group">
+                                    <label for="initialSymptom">Initial Symptom:</label>
+                                    <input type="text" id="initialSymptom" name="initialSymptom">
+                                </div>
+								<div class="form-group">
+                                    <label for="finalSymptom">Final Symptom:</label>
+                                    <input type="text" id="finalSymptom" name="finalSymptom">
+                                </div>
+								<div class="form-group">
+                                    <label for="diagnosis">Diagnosis:</label>
+                                    <input type="text" id="diagnosis" name="diagnosis">
+                                </div>
+                            </div>
+
+                            <!-- Right side of CR Details -->
+                            <div class="cr-right">
+                                <div class="form-group">
+                                    <label for="severity">Severity:</label>
+                                    <input type="text" id="severity" name="severity">
+                                </div>
+								<div class="form-group">
+                                    <label for="buildingId">Building ID:</label>
+                                    <select id="buildingId" name="buildingId">
+                                        <option value="" disabled selected>Select Building ID</option>
+                                        <option value="buildingId1">PRJ</option>
+                                        <option value="buildingId2">KM</option>
+                                        <option value="buildingId3">IFC</option>
+										<option value="buildingId4">BIN</option>
+										<option value="buildingId5">BER</option>
+										<option value="buildingId6">JN</option>
+										<option value="buildingId7">PPJ</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zone">Zone:</label>
+                                    <select id="zone" name="zone">
+                                        <option value="" disabled selected>Select Zone</option>
+                                        <option value="Zone1">Zone Kuching</option>
+                                        <option value="Zone2">Zone Kulim</option>
+                                        <option value="Zone3">Zone Labuan</option>
+										<option value="Zone4">Zone Maluri</option>
+										<option value="Zone5">Zone Maran & Temerloh</option>
+										<option value="Zone6">Zone Melaka Selatan</option>
+										<option value="Zone7">Zone NS Selatan</option>
+                                    </select>
+                                </div>
+								<div class="form-group">
+                                    <label for="wilayah">Wilayah:</label>
+                                    <select id="wilayah" name="wilayah">
+                                        <option value="" disabled selected>Select Wilayah</option>
+                                        <option value="wilayah1">Kuching & Stampin</option>
+                                        <option value="wilayah2">Kedah & Perlis</option>
+                                        <option value="wilayah3">PBP & Labuan</option>
+										<option value="wilayah4">Kualan Lumpur 2</option>
+										<option value="wilayah5">Pahang</option>
+										<option value="wilayah6">Melaka</option>
+										<option value="wilayah7">Negeri Sembilan</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="region">Region:</label>
+                                    <select id="region" name="region">
+                                        <option value="" disabled selected>Select Region</option>
+                                        <option value="Region1">Sarawak Region</option>
+                                        <option value="Region2">Northern Region</option>
+                                        <option value="Region3">Sabah Region</option>
+										<option value="Region4">Central 1 Region</option>
+										<option value="Region5">Eastern Region</option>
+										<option value="Region6">Southern Region</option>
+										<option value="Region7">Central 2 Region</option>
+                                    </select>
+                                </div>
+								<div class="form-group">
+                                    <label for="description">Description:</label>
+                                    <input type="text" id="description" name="description">
+                                </div>
+								<div class="form-group">
+                                    <label for="geoTag">Geo Tag:</label>
+                                    <input type="text" id="geoTag" name="geoTag">
+                                </div>
+								<div class="form-group">
+									<label for="image">Image:</label>
+									<input type="file" id="image" name="image" accept="image/*">
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Last Part (Closure Details) -->
+                <div class="second-last-column">
+                    <!-- Closure Details -->
+                    <div class="panel-section" id="closure-details">
+                        <h3>Closure Details</h3>
+                        <div class="panel-content">
+                            <div class="form-group">
+                                <label for="causeCategory">Cause Category:</label>
+                                <input type="text" id="causeCategory" name="causeCategory">
+                            </div>
+							<div class="form-group">
+                                <label for="causeCode">Cause Code:</label>
+                                <input type="text" id="causeCode" name="causeCode">
+                            </div>
+							<div class="form-group">
+                                <label for="userAction">User Action:</label>
+                                <input type="text" id="userAction" name="userAction">
+                            </div>
+                            <div class="form-group">
+                                <label for="timeResolved">Time Resolved:</label>
+                                <input type="datetime-local" id="timeResolved" name="timeResolved">
+                            </div>
+							<div class="form-group">
+                                <label for="remark">Remark:</label>
+                                <input type="text" id="remark" name="remark">
+                            </div>
+							<div class="form-group">
+								<label for="image2">Image:</label>
+								<input type="file" id="image2" name="image2" accept="image2/*">
+							</div>
+							<div class="form-group">
+                                <label for="null"> </label>
+                            </div>
+							<div class="form-group">
+                                <label for="null"> </label>
+                            </div>
+							<div class="form-group">
+                                <label for="null"> </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Last Part (LOV) -->
+                <div class="last-column">
+                    <!-- LOV -->
+                    <div class="panel-section" id="lov">
+                        <h3>LOV</h3>
+                        <div class="panel-content">
+                            <div class="form-group">
+                                <label for="symptomCode">Initial Symptom Code:</label>
+                                <input type="text" id="symptomCode" name="symptomCode">
+                            </div>
+                            <div class="form-group">
+                                <label for="causeCode">Cause Code:</label>
+                                <input type="text" id="causeCode" name="causeCode">
+                            </div>
+							<div class="form-group">
+                                <label for="causeCategory2">Cause Category:</label>
+                                <input type="text" id="causeCategory2" name="causeCategory2">
+                            </div>
+							<div class="form-group">
+                                <label for="userActionCode">User Action Code:</label>
+                                <input type="text" id="userActionCode" name="userActionCode">
+                            </div>
+							<div class="form-group">
+                                <label for="diagnosisCode">Diagnosis Code:</label>
+                                <input type="text" id="diagnosisCode" name="diagnosisCode">
+                            </div>
+							<div class="form-group">
+                                <label for="priority2">Priority:</label>
+                                <select id="priority2" name="priority2">
+                                    <option value="" disabled selected>Select Priority</option>
+                                    <option value="priority31">Critical</option>
+                                    <option value="priority2">High</option>
+                                    <option value="priority3">Medium</option>
+                                </select>
+                            </div>
+							<div class="form-group">
+                                <label for="finalSymptomCode">Final Symptom Code:</label>
+                                <input type="text" id="finalSymptomCode" name="finalSymptomCode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="form-buttons">
+					<button type="reset" class="btn-reset">Reset</button>
+					<button type="button" class="btn-submit" onclick="alert('Submit button clicked!')">Submit</button>
+				</div>
+            </div>
+        </form>
+    </div>
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		// Function to update ETTR based on CR Created Time & Date and Priority
+		function updateETTR() {
+			const crCreatedTimeDate = document.getElementById('crCreatedTimeDate').value;
+			const priority2 = document.getElementById('priority2').value;
+			const ettrField = document.getElementById('ettr');
+			
+			if (crCreatedTimeDate && priority2) {
+				const crCreatedDate = new Date(crCreatedTimeDate);
+				let daysToAdd = priority2 === 'priority31' ? 1 : 7; // 'priority31' is assumed to be 'Critical'
+
+				// Add days to the CR Created Date
+				crCreatedDate.setDate(crCreatedDate.getDate() + daysToAdd);
+
+				// Format the date to match 'datetime-local' input field format
+				const year = crCreatedDate.getFullYear();
+				const month = String(crCreatedDate.getMonth() + 1).padStart(2, '0');
+				const day = String(crCreatedDate.getDate()).padStart(2, '0');
+				const hours = String(crCreatedDate.getHours()).padStart(2, '0');
+				const minutes = String(crCreatedDate.getMinutes()).padStart(2, '0');
+
+				const newETTR = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+				ettrField.value = newETTR;
+			}
+		}
+
+		// Add event listeners
+		document.getElementById('crCreatedTimeDate').addEventListener('change', updateETTR);
+		document.getElementById('priority2').addEventListener('change', updateETTR);
+		
+		const buildingDropdown = document.getElementById('buildingId');
+        const zoneDropdown = document.getElementById('zone');
+        const wilayahDropdown = document.getElementById('wilayah');
+        const regionDropdown = document.getElementById('region');
+
+        buildingDropdown.addEventListener('change', function() {
+            const selectedBuilding = this.value;
+
+            // Auto-fill based on the building selection
+            if (selectedBuilding === 'buildingId1') {
+                zoneDropdown.value = 'Zone1';
+                wilayahDropdown.value = 'wilayah1';
+                regionDropdown.value = 'Region1';
+            } else if (selectedBuilding === 'buildingId2') {
+                zoneDropdown.value = 'Zone2';
+                wilayahDropdown.value = 'wilayah2';
+                regionDropdown.value = 'Region2';
+            } else if (selectedBuilding === 'buildingId3') {
+                zoneDropdown.value = 'Zone3';
+                wilayahDropdown.value = 'wilayah3';
+                regionDropdown.value = 'Region3';
+            } else if (selectedBuilding === 'buildingId4') {
+                zoneDropdown.value = 'Zone4';
+                wilayahDropdown.value = 'wilayah4';
+                regionDropdown.value = 'Region4';
+			} else if (selectedBuilding === 'buildingId5') {
+                zoneDropdown.value = 'Zone5';
+                wilayahDropdown.value = 'wilayah5';
+                regionDropdown.value = 'Region5';
+			} else if (selectedBuilding === 'buildingId6') {
+                zoneDropdown.value = 'Zone6';
+                wilayahDropdown.value = 'wilayah6';
+                regionDropdown.value = 'Region6';
+			} else if (selectedBuilding === 'buildingId7') {
+                zoneDropdown.value = 'Zone7';
+                wilayahDropdown.value = 'wilayah7';
+                regionDropdown.value = 'Region7';
+            } else {
+                zoneDropdown.value = '';
+                wilayahDropdown.value = '';
+                regionDropdown.value = '';
+            }
+        });
+	});
+	</script>
+</body>
+</html>

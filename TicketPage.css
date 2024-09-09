@@ -1,0 +1,103 @@
+/* Overall Layout */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr; /* Adjusted to 5 columns */
+    gap: 20px;
+}
+
+/* Ensure CR Details is wider */
+.cr-details {
+    grid-column: span 2; /* Spans across two columns */
+}
+
+/* Common Styles */
+.panel-section {
+    background-color: #EFEFEF;
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.panel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="datetime-local"],
+select {
+    width: 85%; 
+    padding: 5px;
+}
+
+/* Combined CR Details Panel Layout */
+.cr-details-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns within CR Details */
+    gap: 20px;
+}
+
+.cr-left, .cr-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Ensure the form layout is positioned relative to contain the buttons */
+.form-layout {
+    position: relative;
+    padding-bottom: 10px; /* Add padding to ensure buttons are not overlapping */
+}
+
+/* Style the container for the buttons */
+.form-buttons {
+    position: absolute;
+    bottom: 5px; /* Move buttons up from the bottom */
+    right: 0px; /* Align buttons to the right */
+    padding: 10px;
+    background: none; /* Remove background to avoid panel look */
+    margin-bottom: 0px; /* Adjust if necessary to position buttons */
+}
+
+/* Style the buttons */
+.btn-reset,
+.btn-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+	width: 150px;
+}
+
+.btn-reset {
+    background-color: red;
+    color: white;
+}
+
+.btn-submit {
+    background-color: green;
+    color: white;
+}
+
+/* Style for h3 */
+h3 {
+    color: darkblue; /* Change h3 color to dark blue */
+}
